@@ -1,0 +1,32 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationRuntime
+metadata:
+  labels:
+    backup.appconnect.ibm.com/component: integrationruntime
+  name: mongov3
+  namespace: tools
+spec:
+  license:
+    accept: true
+    license: L-QECF-MBXVLU
+    use: CloudPakForIntegrationProduction
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: runtime
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 500m
+              memory: 512Mi
+  version: '12.0'
+  barURL:
+    - >-
+      https://ace-dashboard-dash.tools:3443/v1/directories/xml-2-jsonv3?019c3d8f-5a69-41a1-9379-89877d626534
+  configurations:
+    - mongodbloopbackdatasource
+    - mongodbsetdbparms
+    - github-barauth

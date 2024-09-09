@@ -1,0 +1,12 @@
+##
+## github-barauth.yaml
+##
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: github-barauth
+  namespace: tools
+spec:
+  description: Stores bar auth
+  data: eyJhdXRoVHlwZSI6IkJBU0lDX0FVVEgiLCJjcmVkZW50aWFscyI6eyJ1c2VybmFtZSI6IiIsInBhc3N3b3JkIjoiIn19Cg==
+  type: barauth
